@@ -1,0 +1,93 @@
+html{
+	background: #fff;
+}
+
+body{
+	width: 900px;
+	border: 4px solid #789;
+	margin: 20px auto;
+	font-family: Arial, sans-serif, Helvetica;
+}
+
+h1{
+	background: #121624;
+	display: block;
+	font-size: 22px;
+	padding: 8px 10px;
+	color: #fff;
+	margin: 0;
+}
+
+label.error{
+	color: #923;
+	font-style: italic;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	padding: 4px 0;
+	color: #fff;
+	margin-left: 20px;
+}
+
+div.form{
+	background: url(../admin/images/login.png) no-repeat center center;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+form {
+	font-family: Arial, sans-serif, Helvetica;
+	padding: 20px 250px;
+}
+
+input[type=text], input[type=password], input[type=file], select, textarea{
+	width: 300px;
+	padding: 8px 0;
+	color: #555;
+	margin-left: 20px;
+	font-family: Arial, sans-serif, Helvetica;
+	margin-bottom: 4px;
+}
+
+select {
+	text-align: center;
+}
+
+input[type=file]{
+	color: #fff;
+}
+
+textarea{
+	resize: none;
+	height: 100px;
+	padding: 5px 10px;
+}
+
+div.error{
+	color: #921;
+	font-weight: bold;
+	font-style: italic;
+}
+
+a.have{
+	float: left;
+	text-decoration: none;
+	margin-top: 30px;
+	margin-left: 15px;
+	color: #fff;
+}
+
+input[type=submit] {
+	display: block;
+	padding: 8px 30px;
+	color: #789;
+	float: left;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	margin-top: 20px;
+}

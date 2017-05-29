@@ -26,19 +26,32 @@ label {
 	margin-left: 20px;
 }
 
+div.form{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background: url(../images/login.png) no-repeat center center;
+}
+
 form {
 	font-family: Arial, sans-serif, Helvetica;
-	background: url(../images/login.png) no-repeat center center;
 	padding: 20px 250px;
 }
 
-input[type=text], input[type=password], textarea{
+input[type=text], input[type=password], textarea {
 	width: 300px;
 	padding: 8px 0;
 	color: #555;
 	margin-left: 20px;
 	font-family: Arial, sans-serif, Helvetica;
 	margin-bottom: 4px;
+}
+
+
+label.error{
+	color: #923;
+	font-style: italic;
+	font-size: 15px;
 }
 
 textarea{
@@ -58,13 +71,16 @@ input[type=submit] {
 div.login-fail {
 	color: #922;
 	margin-top: 20px;
-	margin-left: 50px;
+	margin-left: 270px;
 	font-style: italic;
 	font-size: 15px;
 }
 
-ul.menu{
+ul{
 	list-style: none;
+}
+
+ul.menu{
 	background: #d55;
 	padding: 0;
 	margin: 0;
@@ -84,4 +100,62 @@ ul.menu li a{
 
 ul.menu li a:hover{
 	background: #f55;
+}
+
+ul.list{
+	margin: 10px 30px;
+	padding: 0;
+}
+
+ul.list li{
+	margin-top: 0;
+	margin-right: 5px;
+	padding: 10px 15px;
+	border-bottom: 1px solid #000;
+}
+
+ul.list li a{
+	padding: 2px;
+	margin-right: 2px;
+}
+
+a.del{
+	color: #f45;
+}
+
+a.edit{
+	color: #e8ab29;
+}
+
+a.add{
+	text-decoration: none;
+	border: 1px solid #392;
+	background: #4a5;
+	padding: 10px 20px;
+	display: block;
+	float: left;
+	margin: 20px 30px;
+}
+
+ul.main{
+	overflow: hidden;
+	margin-bottom: 10px;
+	padding: 0;
+	list-style: none;
+
+}
+
+ul.main li{
+	margin: 5px 20px;
+	border-bottom: 1px solid #777;
+	padding: 10px;
+}
+
+img{
+	height: 140px;
+}
+
+ul.main p{
+	width: 30em;
+	line-height: 1.5em;
 }
