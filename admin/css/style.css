@@ -155,7 +155,77 @@ img{
 	height: 140px;
 }
 
+a.back{
+	float: right;
+	text-decoration: none;
+	padding: 8px;
+}
+
 ul.main p{
 	width: 30em;
 	line-height: 1.5em;
 }
+
+ul.detail{
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+ul.detail li {
+	display: block;
+	width: 200px;
+}
+
+ul.detail img{
+	height: 200px;
+	display: block;
+}
+
+ul.detail h2{
+	font-size: 18px;
+}
+
+ul.detail h2,i,span,p{
+	display: block;
+	padding: 0 40px;
+	font-size: 13px;
+}
+
+ul.detail p{
+	width: 30em;
+	line-height: 1.5em;
+}
+
+div.pagination{
+	float: right;
+	overflow: hidden;
+	margin-top: 35px;
+}
+
+div.left{
+	float: left;
+	display: block;
+	margin-bottom: 20px;
+	margin: 0;
+}
+
+div.right{
+	float: right;
+	display: block;
+	margin-bottom: 20px;
+	margin-right: 8px;
+}
+
+div.pagination span{
+	font-size: 17px;
+	color: #555;
+}
+
+div.pagination a{
+	text-decoration: none;
+}
+
+
+
+

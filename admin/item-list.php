@@ -1,4 +1,20 @@
-<? include("confs/config.php"); ?>
+<? 
+	include("confs/config.php"); 
+
+	#pagination
+	$total = mysqli_query($conn, "SELECT id FROM items");
+	$total = mysqli_num_rows($total);
+
+	$start = 0;
+	$limit = 3;
+
+	if(isset($_GET['start'])){
+		$start = $_GET['start'];
+	}
+
+	$next = $start + $limit;
+	$previous = $start - $limit;
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +34,7 @@
 
 	<ul class="main">
 		<?
-			$result = mysqli_query($conn, "SELECT items.*, users.name FROM items INNER JOIN users ON items.user_id = users.id ") ;
+			$result = mysqli_query($conn, "SELECT items.*, users.name FROM items INNER JOIN users ON items.user_id = users.id ORDER BY created_date DESC LIMIT $start, $limit") ;
 
 			while($row = mysqli_fetch_assoc($result)):
 		?>
@@ -34,12 +50,31 @@
 				<span>($<?= $row['price']; ?>)</span>
 				<p><?= $row['description']; ?></p>
 
-				[<a href="item-del.php?id=<?= $row['id']; ?>" onclick="return confirm('Are you sure?')" class="del">del</a>]
-				[<a href="item-detail.php?id=<?= $row['id']; ?>">detail</a>]
+				[<a href="item-del.php?item_id=<?= $row['id']; ?>" onclick="return confirm('Are you sure?')" class="del">del</a>]
+				[<a href="item-detail.php?item_id=<?= $row['id']; ?>">detail</a>]
 				<div style="clear: both"></div>
 			</li>
 
 		<?endwhile;?>
 	</ul>
+
+	<div class="pagination">
+		<div class="left">
+			<? if($previous < 0): ?>
+				<span>&laquo;Prev</span>
+			<?else:?>
+				<a href="?start=<?= $previous; ?>" class="prev">&laquo;Prev</a>
+			<?endif;?>
+		</div>
+		<div class="right">
+			<? if($next >= $total): ?>
+				<span>&raquo;Next</span>
+			<?else:?>
+				<a href="?start=<?= $next; ?>" class="next">&raquo;Next</a>
+			<?endif;?>
+		</div>
+	</div>
+
+	<div style="clear: both;"></div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Welcome Page</title>
+	<title>Admin Login Page</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
