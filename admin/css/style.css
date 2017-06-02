@@ -140,14 +140,15 @@ a.add{
 ul.main{
 	overflow: hidden;
 	margin-bottom: 10px;
-	padding: 0;
+	padding: 10px;
 	list-style: none;
 }
 
 ul.main li{
-	margin: 5px 20px;
-	border-bottom: 1px solid #777;
+	margin: 10px 20px;
 	padding: 10px;
+	border-bottom: 1px solid #777;
+	display: block;
 }
 
 img{
@@ -155,7 +156,7 @@ img{
 }
 
 a.back{
-	float: right;
+	float: left;
 	text-decoration: none;
 	padding: 8px;
 }
@@ -166,29 +167,30 @@ ul.main p{
 }
 
 ul.detail{
+	margin: 20px 180px;
+	padding: 10px 20px;
 	overflow: hidden;
-	margin: 0;
-	padding: 0;
 }
 
 ul.detail li {
 	display: block;
-	width: 200px;
+	width: 400px;
 }
 
 ul.detail img{
-	height: 200px;
+	height: 300px;
 	display: block;
-}
-
-ul.detail h2{
-	font-size: 18px;
+	margin-left: 0;
 }
 
 ul.detail h2,i,span,p{
 	display: block;
-	padding: 0 40px;
+	margin-left: 100px;
 	font-size: 13px;
+}
+
+ul.detail h2{
+	font-size: 28px;
 }
 
 ul.detail p{
@@ -199,21 +201,38 @@ ul.detail p{
 div.pagination{
 	float: right;
 	overflow: hidden;
-	margin-top: 35px;
+	margin: 0;
+	padding: 0;
 }
 
-div.left{
+.prev {
 	float: left;
 	display: block;
-	margin-bottom: 20px;
-	margin: 0;
 }
 
-div.right{
+.next {
 	float: right;
 	display: block;
-	margin-bottom: 20px;
-	margin-right: 8px;
+}
+
+span.prev{
+	margin: 10px 20px;
+}
+
+a.next{
+	margin: 10px 20px;
+}
+
+a.prev{
+	margin: 10px -1px;
+	padding-right: 40px;
+}
+
+span.next{
+	margin-top:10px;
+	margin-left: -1px;
+	margin-right: 10px;
+	padding-right: 5px;
 }
 
 div.pagination span{
@@ -224,7 +243,3 @@ div.pagination span{
 div.pagination a{
 	text-decoration: none;
 }
-
-
-
-

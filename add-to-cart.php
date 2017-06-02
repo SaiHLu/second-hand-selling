@@ -1,0 +1,8 @@
+<?
+	session_start();
+
+	$id = $_GET['id'];
+
+	$_SESSION['cart'][$id]++;
+
+	header("location: user-item-list.php");

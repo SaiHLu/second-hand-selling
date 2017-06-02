@@ -6,6 +6,7 @@
 
  if ($name == 'admin' and $password == 'sai1997118'){
  	$_SESSION['auth'] = true;
+  $_SESSION['id'] = true;
  	header("location: item-list.php");
  }else{
  	header("location: index.php?login=failed");

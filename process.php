@@ -1,4 +1,5 @@
-<? 
+<?
+	session_start();
 	include("admin/confs/config.php");
 
 	$name = $_POST['name'];
@@ -8,6 +9,6 @@
 
 	$result = mysqli_query($conn, "INSERT INTO users (name, email, address, phone, created_date, modified_date) VALUES ('$name', '$email', '$address', '$phone', now(), now() )");
 
-	// $id = mysqli_insert_id($conn);
+	$_SESSION['id'] = mysqli_insert_id($conn);
 
 	header("location: user-insert-items.php");

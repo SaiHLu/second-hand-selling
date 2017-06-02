@@ -1,5 +1,5 @@
-<? 
-	include("confs/config.php"); 
+<?
+	include("confs/config.php");
 
 	#pagination
 	$total = mysqli_query($conn, "SELECT id FROM items");
@@ -34,7 +34,7 @@
 
 	<ul class="main">
 		<?
-			$result = mysqli_query($conn, "SELECT items.*, users.name FROM items INNER JOIN users ON items.user_id = users.id ORDER BY created_date DESC LIMIT $start, $limit") ;
+			$result = mysqli_query($conn, "SELECT items.*, users.name FROM items LEFT JOIN users ON items.user_id = users.id ORDER BY created_date DESC LIMIT $start, $limit") ;
 
 			while($row = mysqli_fetch_assoc($result)):
 		?>
@@ -59,20 +59,17 @@
 	</ul>
 
 	<div class="pagination">
-		<div class="left">
-			<? if($previous < 0): ?>
-				<span>&laquo;Prev</span>
-			<?else:?>
-				<a href="?start=<?= $previous; ?>" class="prev">&laquo;Prev</a>
-			<?endif;?>
-		</div>
-		<div class="right">
-			<? if($next >= $total): ?>
-				<span>&raquo;Next</span>
-			<?else:?>
-				<a href="?start=<?= $next; ?>" class="next">&raquo;Next</a>
-			<?endif;?>
-		</div>
+		<? if($previous < 0): ?>
+			<span class="prev">&laquo;Prev</span>
+		<?else:?>
+			<a href="?start=<?= $previous; ?>" class="prev">&laquo;Prev</a>
+		<?endif;?>
+
+		<? if($next >= $total): ?>
+			<span class="next">&raquo;Next</span>
+		<?else:?>
+			<a href="?start=<?= $next; ?>" class="next">&raquo;Next</a>
+		<?endif;?>
 	</div>
 
 	<div style="clear: both;"></div>
